@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Aegis SSL Renewal Dashboard</title>
+  assets/style.css
+</head>
+<body>
+  <header>
+    assets/logo.svg
+    <h1>Aegis SSL Renewal Dashboard</h1>
+  </header>
+  <section id="budget">
+    <h2>予算状況</h2>
+    <div id="budget-info"></div>
+  </section>
+  <section id="certificates">
+    <h2>証明書一覧</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>CN</th><th>種別</th><th>期限</th><th>ステータス</th><th>価格</th>
+        </tr>
+      </thead>
+      <tbody id="cert-table"></tbody>
+    </table>
+  </section>
+  <section id="logs">
+    <h2>自動更新ログ</h2>
+    <pre id="log-view"></pre>
+  </section>
+  <section id="alerts">
+    <h2>警告・停止</h2>
+    <div id="alert-view"></div>
+  </section>
+  assets/dashboard.js
+</body>
+</html>
