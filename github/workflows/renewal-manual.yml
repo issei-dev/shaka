@@ -1,0 +1,21 @@
+name: SSL Renewal Manual
+on:
+  workflow_dispatch:
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Run renewal script
+        run: node scripts/renew.js
+      - name: Commit updated JSON
+        run: |
+          git config --global user.name "Aegis Bot"
+          git config --global user.email "bot@aegis.local"
+          git add docs/data/*.json
+          git commit -m "Manual renewal update"
+          git push
