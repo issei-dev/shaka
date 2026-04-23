@@ -1,0 +1,26 @@
+{
+  "certificates": [
+    {
+      "commonName": "www.example.com",
+      "productType": "DV",
+      "orderId": "123456",
+      "status": "Issue completed",
+      "expiresAt": "2026-06-01",
+      "price": 12000,
+      "currency": "JPY"
+    }
+  ],
+  "budgets": {
+    "monthlyMaxAmount": 50000,
+    "monthlyMaxCount": 10,
+    "spentAmount": 12000,
+    "spentCount": 1,
+    "stopFlag": false,
+    "manualResetAt": "2026-04-01"
+  },
+  "autoRenew": {
+    "enabled": true,
+    "daysBefore": 10,
+    "validationMethod": "DNS"
+  }
+}
